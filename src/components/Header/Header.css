@@ -1,0 +1,39 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 28px;
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid rgba(var(--brand-rgb), 0.18);
+}
+
+.header-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-badge {
+  padding: 4px 12px;
+  border: 1px solid var(--brand);
+  border-radius: 999px;
+  color: var(--brand);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+@media (max-width: 639px) {
+  .header {
+    padding: 0 16px;
+  }
+}

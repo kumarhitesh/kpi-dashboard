@@ -1,0 +1,212 @@
+.drilldown {
+  padding: 28px;
+}
+
+.drilldown-hero {
+  margin-bottom: 24px;
+}
+
+.drilldown-kpi-value {
+  display: block;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 56px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.delta-badges,
+.drilldown-analysis {
+  gap: 24px;
+}
+
+.delta-badges {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 32px;
+}
+
+.delta-badge,
+.drilldown-panel {
+  background-color: rgba(var(--brand-rgb), 0.1);
+}
+
+.delta-badge {
+  padding: 16px;
+  border-left: 3px solid;
+  border-radius: 10px;
+}
+
+.delta-badge-good {
+  border-left-color: var(--positive);
+}
+
+.delta-badge-bad {
+  border-left-color: var(--negative);
+}
+
+.delta-badge-neutral {
+  border-left-color: var(--text-muted);
+}
+
+.delta-badge-good .delta-badge-value {
+  color: var(--positive);
+}
+
+.delta-badge-bad .delta-badge-value {
+  color: var(--negative);
+}
+
+.delta-badge-neutral .delta-badge-value {
+  color: var(--text-secondary);
+}
+
+.delta-badge-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-muted);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.delta-badge-value {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.drilldown-analysis {
+  display: grid;
+  align-items: start;
+  grid-template-columns: minmax(0, 1.25fr) minmax(320px, 0.75fr);
+}
+
+.drilldown-section {
+  min-width: 0;
+}
+
+.drilldown-section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.drilldown-section-icon {
+  color: var(--brand);
+  font-size: 16px;
+}
+
+.drilldown-section-title {
+  color: var(--text-muted);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.drilldown-section-line {
+  flex: 1;
+  margin: 0;
+  border: none;
+  border-top: 1px solid rgba(var(--brand-rgb), 0.18);
+}
+
+.drilldown-panel {
+  padding: 28px;
+  border-radius: 12px;
+}
+
+.drilldown-chart {
+  width: 100%;
+  height: 300px;
+}
+
+.drilldown-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.drilldown-table th,
+.drilldown-table td {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(var(--brand-rgb), 0.18);
+}
+
+.drilldown-table th {
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.drilldown-table td {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.drilldown-table th:last-child,
+.drilldown-table td:last-child {
+  font-family: var(--font-mono);
+  text-align: right;
+}
+
+.drilldown-table tr:last-child td {
+  border-bottom: none;
+}
+
+.drilldown-tabs {
+  display: inline-flex;
+  gap: 4px;
+  margin-bottom: 12px;
+  padding: 4px;
+  background-color: rgba(var(--brand-rgb), 0.1);
+  border-radius: 8px;
+}
+
+.drilldown-tab {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.drilldown-tab:hover {
+  color: var(--text-primary);
+}
+
+.drilldown-tab-active {
+  color: var(--text-primary);
+  background-color: var(--brand);
+}
+
+@media (max-width: 1279px) {
+  .drilldown-analysis {
+    grid-template-columns: 1fr;
+  }
+
+  .delta-badges {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .drilldown,
+  .drilldown-panel {
+    padding: 16px;
+  }
+
+  .drilldown-kpi-value {
+    font-size: 40px;
+  }
+}
