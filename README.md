@@ -14,8 +14,6 @@ npm run test
 - `src/index.css` holds the core color palette, body styles, fonts, and the small global reset.
 - Component CSS files own layout, responsive behavior, spacing, borders, colors, typography, radius, hover states, and chart/table styling.
 - Softer palette variants use `rgba(var(--*-rgb), opacity)`, so color values stay centralized.
-- The UI font is inherited from `body`; components set the mono font only for brand text and numeric values.
-- Tailwind is not used in this project.
 - Components should use CSS variables for visual values instead of hardcoded colors.
 
 ## Data Flow
@@ -45,4 +43,11 @@ npm run test
 - `src/utils/parseData.ts` owns CSV parsing.
 - `src/hooks/useKpiData.ts` owns loading and error handling, and feeds data to the store.
 - `src/store` owns Redux state.
-- Components receive props, format values, and render.
+
+## Library Choices
+
+- React Router — Used for dynamic client-side routing and KPI drilldown pages.
+- Redux Toolkit — Used for centralized shared state management, avoiding unnecessary re-renders and keeping KPI data accessible across routes/components.
+- Recharts — Used for responsive KPI visualizations and trend charts with simple React integration.
+- React Icons — Used for lightweight and consistent KPI/navigation icons.
+- Papa Parse — Used for fast and reliable CSV parsing. 
